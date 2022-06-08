@@ -56,7 +56,7 @@ AmoPipelinesStatuses <- function(email = NULL, apikey = NULL, domain = NULL, aut
   }) %>% bind_rows()
 
   nm <- c(names(pipelines_df)[grepl('pipeline', names(pipelines_df))], names(pipelines_df)[grepl('status', names(pipelines_df))])
-  pipelines_df <- pipelines_df %>% select(nm) %>% select(-status_color) %>% as.data.frame()
+  pipelines_df <- pipelines_df %>% select(nm) %>% as.data.frame()
 
   return(pipelines_df)
 }
